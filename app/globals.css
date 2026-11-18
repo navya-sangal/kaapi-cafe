@@ -57,9 +57,9 @@ h3 {
 }
 h1 em {
   color: var(--accent);
-  /* The browser slants the regular Fraunces, which saves downloading a separate italic font. */
+  /* Fraunces' real italic (loaded in app/layout.tsx), not a slanted copy of the regular font. */
+  font-family: var(--font-display-italic, "Iowan Old Style"), Georgia, serif;
   font-style: italic;
-  font-synthesis: style;
 }
 p {
   margin: 0 0 1em;
