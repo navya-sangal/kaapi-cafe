@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.env*
+.vercel
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# Claude Code desktop preview config (local only)
+.claude/
