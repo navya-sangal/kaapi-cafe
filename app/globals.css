@@ -64,6 +64,22 @@ h1 em {
 p {
   margin: 0 0 1em;
 }
+/* SVG icons (components/Icons.tsx) sized like a letter of the text around them. */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+}
+.icon--star {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.05em;
+}
+.hero__stats .icon--star {
+  margin-left: 0.08em;
+}
 a {
   color: inherit;
 }
@@ -326,7 +342,7 @@ a {
   font-family: var(--display);
   font-size: 1.4rem;
 }
-.hero__badge span {
+.hero__badge > span {
   font-size: 0.85rem;
   color: var(--coffee-soft);
 }
@@ -423,10 +439,9 @@ a {
   font-weight: 600;
   font-size: 1.2rem;
 }
-/* Fraunces keeps "₹" in a separate 33 KB file. Drawing just this one character with a
-   built-in serif font avoids that download on every visit. */
+/* "₹" comes from a 1 KB font with only that symbol (loaded in app/layout.tsx). */
 .rupee {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-rupee, Georgia), Georgia, "Times New Roman", serif;
 }
 .menu__item p {
   margin: 6px 0 0;
@@ -522,8 +537,9 @@ a {
   flex-direction: column;
 }
 .review__stars {
+  display: flex;
+  gap: 3px;
   color: var(--mustard);
-  letter-spacing: 3px;
 }
 .review__quote {
   font-family: var(--display);

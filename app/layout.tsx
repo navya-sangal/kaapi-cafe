@@ -19,6 +19,15 @@ const displayItalic = localFont({
   adjustFontFallback: "Times New Roman",
   preload: false,
 });
+// Fraunces keeps "₹" in a separate 33 KB file, so this is a 1 KB copy with only that symbol.
+// Not every device has a font with "₹", so without it some would show an empty box.
+const rupee = localFont({
+  src: "./fonts/fraunces-rupee.woff2",
+  weight: "100 900",
+  variable: "--font-rupee",
+  adjustFontFallback: false,
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: "Kaapi & Co. | Filter coffee café in Bandra West, Mumbai",
@@ -28,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${displayItalic.variable} ${body.variable}`}>
+    <html lang="en" className={`${display.variable} ${displayItalic.variable} ${rupee.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   );

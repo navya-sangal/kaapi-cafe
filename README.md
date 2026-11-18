@@ -36,8 +36,9 @@ app/
   page.tsx        puts the sections together in order
   globals.css     all styles; colours are in :root at the top
   icon.svg        the browser-tab icon
-  fonts/          trimmed Fraunces SemiBold Italic for the hero's italic word (see below)
+  fonts/          trimmed Fraunces files: the hero's italic word (see below) and "₹" on its own
 components/       one file per section (Navbar, Hero, Menu, Gallery, Reserve…)
+  Icons.tsx            ★ and → drawn as SVG, so they show on every device (use these, not the characters)
   WhatsAppButton.tsx   the floating chat button
   ScrollReveal.tsx     the scroll-in animations (add data-reveal to any element)
 data/site.ts      ALL content: name, address, hours, menu, reviews, photos, WhatsApp, map

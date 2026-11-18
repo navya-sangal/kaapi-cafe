@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { site } from "@/data/site";
+import { ArrowRight } from "./Icons";
 
 export default function Visit() {
   const query = encodeURIComponent(site.map.query);
@@ -15,7 +16,8 @@ export default function Visit() {
           <h2>Find the yellow door on Chapel Road.</h2>
           <p className="muted">{site.address}</p>
           <a href={directionsUrl} target="_blank" rel="noreferrer" className="btn btn--ghost">
-            Get directions →
+            Get directions
+            <ArrowRight />
           </a>
         </div>
         <div className="visit__card" data-reveal style={{ "--reveal-delay": "100ms" } as CSSProperties}>

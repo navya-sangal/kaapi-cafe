@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { reviews } from "@/data/site";
+import { Star } from "./Icons";
 
 export default function Reviews() {
   return (
@@ -18,7 +19,9 @@ export default function Reviews() {
               style={{ "--reveal-delay": `${i * 100}ms` } as CSSProperties}
             >
               <p className="review__stars" role="img" aria-label="5 out of 5 stars">
-                ★★★★★
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <Star key={n} />
+                ))}
               </p>
               <p className="review__quote">“{r.quote}”</p>
               <footer>

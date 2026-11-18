@@ -1,4 +1,5 @@
 import { site } from "@/data/site";
+import { Star } from "./Icons";
 
 export default function Hero() {
   return (
@@ -25,7 +26,10 @@ export default function Hero() {
           </div>
           <dl className="hero__stats">
             <div>
-              <dt>4.8★</dt>
+              <dt>
+                4.8
+                <Star label="stars" />
+              </dt>
               <dd>1,200+ Google reviews</dd>
             </div>
             <div>
