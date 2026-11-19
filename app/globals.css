@@ -224,7 +224,8 @@ a {
 }
 .hero__stats {
   display: flex;
-  gap: 40px;
+  /* Narrower gap on phones so both stats fit side by side. */
+  gap: clamp(16px, 5vw, 40px);
   margin: 0;
   padding-top: 28px;
   border-top: 1px solid var(--line);
@@ -233,6 +234,8 @@ a {
   font-family: var(--display);
   font-size: 1.6rem;
   font-weight: 600;
+  /* Keep "Open daily" on one line; the small text under it can wrap instead. */
+  white-space: nowrap;
 }
 .hero__stats dd {
   margin: 0;

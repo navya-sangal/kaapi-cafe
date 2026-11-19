@@ -34,7 +34,8 @@ export default function Hero() {
             </div>
             <div>
               <dt>Open daily</dt>
-              <dd>{site.hours[0].time}</dd>
+              {/* Keeps "8:00 am" and "10:00 pm" together, so on small phones it wraps at the dash. */}
+              <dd>{site.hours[0].time.replace(/ (am|pm)/gi, " $1")}</dd>
             </div>
           </dl>
         </div>
